@@ -16,6 +16,13 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"],
+  "include": [
+    "tests/**/*.ts",
+    "tests/unit/setupTests.ts",
+    "vite.config.ts",
+    ".eslintrc.cjs",
+    "src",
+    "tailwind.config.cjs"
+, "src/App.test.tsx"  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

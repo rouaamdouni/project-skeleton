@@ -1,18 +1,13 @@
-import {Routes, Route} from "react-router-dom"
-import LangSelector from "./pages/Homepage"
-function App() {
- 
+import { Routes, Route } from 'react-router-dom';
+import { Homepage, SignIn, SignUp, PageNotFound } from './pages/index';
+
+export default function App() {
   return (
-
     <Routes>
-      <Route path="/" element={<LangSelector/>}/>
-      {/* <Route path="register" element={<Register/>}/>
-      <Route path="login" element={<Login/>}/>
-      <Route path="cours" element={<Cours/>}/> */}
-
+      <Route path="/" element={<Homepage />} />
+      <Route path="/login" element={<SignIn />} />
+      <Route path="/register" element={<SignUp />} />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
-    
-  )
+  );
 }
-
-export default App
