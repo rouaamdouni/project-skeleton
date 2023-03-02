@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ['Segoe UI', 'Segoe UI Bold', 'Segoe UI Light'],
+      font: ['Segoe UI', 'Segoe UI Bold', 'Segoe UI Light'],
     },
     colors: {
       darkBlue: '#05445E',

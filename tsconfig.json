@@ -22,7 +22,8 @@
     "vite.config.ts",
     ".eslintrc.cjs",
     "src",
-    "tailwind.config.cjs"
+    "tailwind.config.cjs",
+    ".vscode/setting.json"
 , "src/App.test.tsx"  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
