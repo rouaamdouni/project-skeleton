@@ -23,7 +23,8 @@
     ".eslintrc.cjs",
     "src",
     "tailwind.config.cjs",
-    ".vscode/setting.json"
+    "setting.json",
+    "postcss.config.cjs"
 , "src/App.test.tsx"  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
