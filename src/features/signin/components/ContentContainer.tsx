@@ -9,14 +9,14 @@ export default function SignInContent() {
         </div>
         <div className="flex flex-col items-center justify-between ">
           <div>
-            <span className="text-yellow font-bold text-[18px]">
+            <span className="tt">
               Start Taking Control Of Your Career
             </span>
           </div>
           <div className="text-center">
-            <span className="text-darkBlue font-semibold text-[18px]">
-              Gain practical experience, mentorship and guidance you need to
-              start your new career
+            <span className="text">
+              Gain practical experience, mentorship and guidance you need<br></br>
+               to start your new career
             </span>
           </div>
         </div>
