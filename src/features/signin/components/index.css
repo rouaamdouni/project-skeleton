@@ -1,0 +1,78 @@
+.login-form-wrapper{
+  @apply flex flex-col items-center bg-white absolute h-[85%] w-[45%] left-[53%] top-[8%] shadow-lg bg-white rounded-md  hover:shadow-xl transition duration-300
+}
+.login-form-content{
+  @apply flex w-full max-w-2xl flex-col items-center gap-4 
+}
+.App {
+  @apply w-[700px] h-[900px] text-center px-[5.2rem] py-[4.9rem];
+  vertical-align: left;
+  background: #f4f4f8;
+}
+.card {
+  @apply text-center w-[500px] h-[500px] border shadow-[10px_10px_64px_0px_rgba(180,180,207,0.75)] border-solid border-[white];
+  background: #f4f6fb;
+  /* -webkit-box-shadow: 10px 10px 64px 0px rgba(186, 186, 202, 0.75);
+  -moz-box-shadow: 10px 10px 64px 0px rgba(208, 208, 231, 0.75); */
+}
+.form {
+  @apply p-[25px];
+}
+.card_header {
+  @apply flex items-center;
+}
+.input-field {
+  @apply bg-[#f3fafd] rounded box-border w-full h-[35px] text-[0.8em] text-[#353538] font-light text-[#05445E] mt-[30px] pt-[0.3em] pb-[0.4em] px-[0.5em] border-[solid] border-[#30ade2];
+  font-family: inherit;
+  transition: box-shadow 0.2s linear, border-color 0.25s ease-out;
+}
+.form input:focus {
+  @apply shadow-[0px_2px_10px_rgba(0,0,0,0.1)] bg-[#edf8fc] border-[solid] border-[#4eb8dd];
+  outline: none;
+}
+.form input::placeholder {
+  @apply text-[#09435c83] text-[0.4em] text-[0.7rem] pr-12 p-4;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/*Buttons*/
+.err {
+  @apply text-[#05445E] text-[0.4em] text-[0.7rem] float-left pr-12 p-4;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.btn {
+  @apply rounded font-[bold] text-[0.8em] uppercase bg-[#FFCC29] text-[#5e6681] shadow-[0_8px_24px_0_rgb(255_235_167_/_20%)] transition-all duration-[0.3s] ease-[ease-in-out] mt-10 m-4 px-[1.2em] py-[0.6em] border-[none] hover:bg-[#5e6681] hover:text-[#ffeba7] hover:shadow-[0_8px_24px_0_rgb(16_39_112_/_20%)];
+}
+/* .btn-link {
+  @apply text-neutral-100 block text-[0.75em] transition-[color] duration-[0.3s] ease-[ease-out] text-[#0b5778] block text-[0.85em] transition-[color] duration-[0.3s] ease-[ease-out] float-right mt-5 hover:text-[#ffeba7];
+} */
+
+/*Hover & focus*/
+.field input:focus::placeholder {
+  @apply opacity-0 transition-opacity duration-[0.3s];
+}
+.title {
+  @apply text-[1.5em] font-medium text-[#05445E] mt-[30px] mb-4;
+}
+.shaper {
+  @apply text-[#05445E] mt-[30px] text-[#05445E] mt-[3.5_rem];
+}
+/* .btn-link {
+  align-content: left;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+} */
+/* .btn-link2 {
+  @apply text-[#FFCC29];
+} */
+.button {
+  @apply text-center flex clear-both justify-between;
+}
+.separator {
+  @apply w-full flex items-center justify-center gap-[30px] text-[#8B8E98];
+}
+.separator .line {
+  @apply block w-full h-px bg-[#e8e8e8] border-0;
+}

@@ -39,8 +39,8 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex flex-col items-center bg-white absolute h-[85%] w-[45%] left-[53%] top-[8%] shadow-lg bg-white rounded-md  hover:shadow-xl transition duration-300">
-      <div className="flex w-full max-w-2xl flex-col items-center gap-4 ">
+    <div className="login-form-wrapper">
+      <div className="login-form-content">
         <h1 className=" text-darkBlue text-3xl font-bold mt-6 mb-4 text-center">
           Sign In
         </h1>
