@@ -1,48 +1,58 @@
+<<<<<<< HEAD:src/features/authentication/signin/components/LoginForm.tsx
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { logUser } from '../../services/api/user';
 import { useAuth } from '../../services/contexts/Auth';
+=======
+import { useForm } from "react-hook-form";
+
+
+import { ErrorMessage } from '@hookform/error-message';
+
+import './index.css'
+
+
+>>>>>>> 24f2810c8c2cd1a80c266d64286fcb945f6e0be1:src/features/signin/components/LoginForm.tsx
 import {
-  Button,
+
   CustomErrors,
   CustomInput,
   LinkedinBtn,
   GoogleBtn,
 } from './index';
-import { SignInSchema, LoginArgs } from '../models/signinschema';
 
-export default function LoginForm() {
+
+export default function FormSignIn() {
   const {
-    formState: { errors },
     register,
-    handleSubmit,
-  } = useForm<LoginArgs>({
-    defaultValues: {
-      email: '',
-      password: '',
-    },
-    mode: 'all',
-    resolver: zodResolver(SignInSchema),
-  });
-
-  const { handleLogin } = useAuth();
-
-  const onSubmit: SubmitHandler<LoginArgs> = async (state) => {
-    const loginToken = await logUser(state);
-    if (loginToken.status === 'user_not_logged') {
-      toast.error(loginToken.msg, { position: 'top-right' });
-      return;
-    }
-    handleLogin(loginToken.accessToken);
-    console.log(state);
-  };
+    formState: { errors },
+    handleSubmit
+  } = useForm();
+  const onSubmit = (data:unknown) => console.log(data);
+   
 
   return (
+    
     <div className="login-form-wrapper">
-      <div className="login-form-content">
-        <h1 className="sign-in-header">Sign In</h1>
+    <div className="login-form-content">
+                <h1 className="sign-in-header">Sign In</h1>
+           
+            <div className="buttons-wrapper">
+        <GoogleBtn/>
+        <LinkedinBtn/>
+        
+      </div>
+      <div className="separator">
+            <hr className="line" />
+            <span>Or</span>
+            <hr className="line" />
+      </div>
+       
+       
+             
 
+<<<<<<< HEAD:src/features/authentication/signin/components/LoginForm.tsx
         <div className="buttons-wrapper">
           <LinkedinBtn />
           <LinkedinBtn />
@@ -83,8 +93,44 @@ export default function LoginForm() {
               </a>
             </p>
           </div>
+=======
+
+  
+    <form className="form" onSubmit={handleSubmit(onSubmit)}>
+      
+    <div className="Group">
+      <input className ='input'type="email" placeholder="Email" 
+        {...register("singleErrorInput", {
+          required: "Please enter email"
+        })}
+      />
+      <ErrorMessage className="CustomError"errors={errors} name="singleErrorInput" as="p" />
+
+      
+      
+        
+        <input className="input" type="password"   placeholder="Password" {...register("singleErrorInput2", {
+          required: "Please enter password"
+        })}/>
+          <ErrorMessage className="err"errors={errors} name="singleErrorInput2" as="p" />
+    
+      
+      
+      </div> 
+      <a href="#" className="btn-link">Forgot your password?</a>
+      <button type="submit" className='btn'>Sign In</button>
+      <p className='shaper'>Not a shaper yet? <a href ="#" className='btn-link2'>Create your account</a></p>
+      
+      
+>>>>>>> 24f2810c8c2cd1a80c266d64286fcb945f6e0be1:src/features/signin/components/LoginForm.tsx
         </form>
       </div>
-    </div>
-  );
+  
+   </div>
+      
+  
+    
+
+
+  )
 }
