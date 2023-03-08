@@ -41,18 +41,13 @@ export default function LoginForm() {
   return (
     <div className="login-form-wrapper">
       <div className="login-form-content">
-        <h1 className=" text-darkBlue text-3xl font-bold mt-6 mb-4 text-center">
-          Sign In
-        </h1>
+        <h1 className="sign-in-header">Sign In</h1>
 
-        <div className="flex flex-row justify-between items-center py-[25px]">
+        <div className="buttons-wrapper">
           <GoogleBtn />
           <LinkedinBtn />
         </div>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex justify-between items-center  flex-col py-[55px] "
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="form">
           <CustomInput
             type="email"
             placeholder="Your email address"
@@ -70,7 +65,7 @@ export default function LoginForm() {
             <CustomErrors> {errors.password.message} </CustomErrors>
           )}
           <Button type="submit">
-            <span className="text-sm font-bold capitalize text-darkBlue">
+            <span >
               login
             </span>
           </Button>

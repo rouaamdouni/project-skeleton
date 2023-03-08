@@ -16,7 +16,7 @@ export default function Button({
     <button
       type={type}
       onClick={clickHandler}
-      className="btn"
+      className="custombtn"
     >
       {children}
     </button>
