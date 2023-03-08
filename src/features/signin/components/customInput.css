@@ -1,0 +1,8 @@
+      @apply .input{
+      w-full rounded-xl border border-gray-100 bg-white px-6 py-3
+
+      }
+
+      @apply .App {
+        text-center bg-gray-200
+      }

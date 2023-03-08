@@ -1,5 +1,8 @@
-import { SignInContent, SignInForm } from '../components/signin/index';
 import background from '../assets/images/bg/background.png';
+import {
+  ContentContainer,
+  LoginForm,
+} from '../features/signin/components/index';
 
 export default function SignIn() {
   return (
@@ -7,8 +10,8 @@ export default function SignIn() {
       className="bg-fixed bg-no-repeat bg-cover bg-center relative h-screen flex flex-col"
       style={{ backgroundImage: `url(${background})` }}
     >
-      <SignInContent />
-      <SignInForm />
+      <ContentContainer />
+      <LoginForm />
     </div>
   );
 }

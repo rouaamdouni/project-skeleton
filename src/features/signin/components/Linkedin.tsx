@@ -1,8 +1,8 @@
 import { LinkedIn } from 'react-linkedin-login-oauth2';
 // You can use provided image shipped by this package or using your own
-import linkedin from '../../assets/icons/linkedin.png';
+import linkedin from '../../../assets/icons/linkedin.png';
 
-function SignUpButtonLinkedin() {
+function LinkedinBtn() {
   return (
     <LinkedIn
       clientId="78qs72yrglwasl"
@@ -36,4 +36,4 @@ function SignUpButtonLinkedin() {
     </LinkedIn>
   );
 }
-export default SignUpButtonLinkedin;
+export default LinkedinBtn;
