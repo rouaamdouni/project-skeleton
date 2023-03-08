@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import './index.css'
 
 type SubmitButtonProps = {
   children: ReactNode;
@@ -16,7 +15,7 @@ export default function Button({
     <button
       type={type}
       onClick={clickHandler}
-      className="custombtn"
+      className="flex w-full items-center justify-center rounded-lg bg-purple-800 px-8 py-2 hover:bg-purple-700"
     >
       {children}
     </button>

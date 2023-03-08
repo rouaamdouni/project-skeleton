@@ -1,8 +1,8 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { logUser } from '../api/user';
-import { useAuth } from '../contexts/Auth';
+import { logUser } from '../../services/api/user';
+import { useAuth } from '../../services/contexts/Auth';
 import {
   Button,
   CustomErrors,
@@ -44,10 +44,15 @@ export default function LoginForm() {
         <h1 className="sign-in-header">Sign In</h1>
 
         <div className="buttons-wrapper">
-          <GoogleBtn />
+          <LinkedinBtn />
           <LinkedinBtn />
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="form">
+        <div className="separator">
+          <hr className="line" />
+          <span>Or</span>
+          <hr className="line" />
+        </div>
+        <form onSubmit={handleSubmit(onSubmit)} className="form-container">
           <CustomInput
             type="email"
             placeholder="Your email address"
@@ -64,11 +69,20 @@ export default function LoginForm() {
           {errors.password && (
             <CustomErrors> {errors.password.message} </CustomErrors>
           )}
-          <Button type="submit">
-            <span >
-              login
-            </span>
-          </Button>
+          <div className='w-full pt-[8px] pl-[30%] flex flex-col '>
+            <a href="#" className="btn-link">
+              Forgot your password?
+            </a>
+            <Button type="submit">
+              <span>login</span>
+            </Button>
+            <p className="shaper">
+              Not a shaper yet?{' '}
+              <a href="#" className="btn-link2">
+                Create your account
+              </a>
+            </p>
+          </div>
         </form>
       </div>
     </div>

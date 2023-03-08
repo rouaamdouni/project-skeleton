@@ -2,7 +2,7 @@ import background from '../assets/images/bg/background.png';
 import {
   ContentContainer,
   LoginForm,
-} from '../features/signin/components/index';
+} from '../features/authentication/signin/components/index';
 
 export default function SignIn() {
   return (

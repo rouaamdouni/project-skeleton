@@ -1,6 +1,6 @@
 import { LinkedIn } from 'react-linkedin-login-oauth2';
 // You can use provided image shipped by this package or using your own
-import linkedin from '../../../assets/icons/linkedin.png';
+import linkedin from '../../../../assets/icons/linkedin.png';
 
 function LinkedinBtn() {
   return (
