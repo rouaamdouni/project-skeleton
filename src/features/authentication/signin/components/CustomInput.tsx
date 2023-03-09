@@ -2,7 +2,7 @@ import './index.css';
 
 type CustomInputProps = {
   placeholder: string;
-  type: 'email' | 'text' | 'password';
+  type: 'email' | 'string' | 'password';
   // onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 

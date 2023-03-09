@@ -1,8 +1,8 @@
 import { LinkedIn } from 'react-linkedin-login-oauth2';
 // You can use provided image shipped by this package or using your own
-import linkedin from '../../../../assets/icons/linkedin.png';
+import google from '../../../../assets/icons/google.png';
 
-function LinkedinBtn() {
+function Goooglebtn() {
   return (
     <LinkedIn
       clientId="78qs72yrglwasl"
@@ -22,13 +22,13 @@ function LinkedinBtn() {
         >
           <div className="flex justify-start items-start  ">
             <img
-              src={linkedin}
+              src={google}
               alt="Sign in with Linked In"
               className="h-5 w-5"
             />
             <span className="font-fontlight font-semibold px-[10px] tracking-[0.25px] text-darkBlue">
               {' '}
-              Login with Linkedin
+              Login with Google
             </span>
           </div>
         </button>
@@ -36,4 +36,4 @@ function LinkedinBtn() {
     </LinkedIn>
   );
 }
-export default LinkedinBtn;
+export default Goooglebtn;

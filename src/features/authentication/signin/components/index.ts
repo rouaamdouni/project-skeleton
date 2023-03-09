@@ -5,5 +5,6 @@ import ContentContainer from './ContentContainer';
 import LoginForm from './LoginForm';
 import LinkedinBtn from './Linkedin';
 import GoogleBtn from './GoogleBtn';
+import Goooglebtn from './Goooglebtn';
 
-export { Button, CustomInput, CustomErrors, ContentContainer, LoginForm, GoogleBtn, LinkedinBtn };
+export { Button, CustomInput, CustomErrors, ContentContainer, LoginForm, GoogleBtn, LinkedinBtn ,Goooglebtn};

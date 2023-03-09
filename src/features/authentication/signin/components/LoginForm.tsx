@@ -8,16 +8,16 @@ import {
   CustomErrors,
   CustomInput,
   LinkedinBtn,
-  GoogleBtn,
+  Goooglebtn,
 } from './index';
-import { SignInSchema, LoginArgs } from '../models/signinschema';
+import { SignInSchema, ValidationSchema } from '../models/signinschema';
 
 export default function LoginForm() {
   const {
     formState: { errors },
     register,
     handleSubmit,
-  } = useForm<LoginArgs>({
+  } = useForm<ValidationSchema>({
     defaultValues: {
       email: '',
       password: '',
@@ -28,15 +28,17 @@ export default function LoginForm() {
 
   const { handleLogin } = useAuth();
 
-  const onSubmit: SubmitHandler<LoginArgs> = async (state) => {
+  const onSubmit: SubmitHandler<ValidationSchema> = async (data) => {
     const loginToken = await logUser(state);
     if (loginToken.status === 'user_not_logged') {
       toast.error(loginToken.msg, { position: 'top-right' });
+      console.log(data);
       return;
     }
     handleLogin(loginToken.accessToken);
-    console.log(state);
+    console.log(data);
   };
+  // const onSubmit: SubmitHandler<ValidationSchema> = (data) => console.log(data);
 
   return (
     <div className="login-form-wrapper">
@@ -44,7 +46,7 @@ export default function LoginForm() {
         <h1 className="sign-in-header">Sign In</h1>
 
         <div className="buttons-wrapper">
-          <LinkedinBtn />
+          <Goooglebtn />
           <LinkedinBtn />
         </div>
         <div className="separator">
@@ -54,22 +56,22 @@ export default function LoginForm() {
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="form-container">
           <CustomInput
-            type="email"
-            placeholder="Your email address"
+            type="string"
+            placeholder="Email"
             {...register('email')}
           />
           {errors.email && (
-            <CustomErrors> {errors.email.message} </CustomErrors>
+            <CustomErrors> {errors?.email.message} </CustomErrors>
           )}
           <CustomInput
-            type="password"
-            placeholder="Your password"
+            type="string"
+            placeholder="Password"
             {...register('password')}
           />
           {errors.password && (
-            <CustomErrors> {errors.password.message} </CustomErrors>
+            <CustomErrors> {errors?.password.message} </CustomErrors>
           )}
-          <div className='w-full pt-[8px] pl-[30%] flex flex-col '>
+          <div className="w-full pt-[8px] flex flex-col ">
             <a href="#" className="btn-link">
               Forgot your password?
             </a>
@@ -78,7 +80,7 @@ export default function LoginForm() {
             </Button>
             <p className="shaper">
               Not a shaper yet?{' '}
-              <a href="#" className="btn-link2">
+              <a href="#" className="btn-link2 ">
                 Create your account
               </a>
             </p>

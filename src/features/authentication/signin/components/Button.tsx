@@ -16,7 +16,7 @@ export default function Button({
     <button
       type={type}
       onClick={clickHandler}
-      className="bg-yellow w-[130px] ml-[30px] h-[40px] mt-[30px]  text-darkBlue font-semibold rounded-[3px] mt-[20px] shadow-[-5px_11px_11px_4px_rgba(213,213,213,0.75)]"
+      className="bg-yellow w-[130px] ml-[35%] h-[40px] mt-[30px]  text-darkBlue font-semibold rounded-[3px] mt-[20px] shadow-[-5px_11px_11px_4px_rgba(213,213,213,0.75)]"
     >
       {children}
     </button>
