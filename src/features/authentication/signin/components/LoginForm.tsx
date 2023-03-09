@@ -28,16 +28,16 @@ export default function LoginForm() {
 
   const { handleLogin } = useAuth();
 
-  const onSubmit: SubmitHandler<ValidationSchema> = async (data) => {
+  const onSubmit: SubmitHandler<ValidationSchema> = async (state,data) => {
     const loginToken = await logUser(state);
     if (loginToken.status === 'user_not_logged') {
       toast.error(loginToken.msg, { position: 'top-right' });
-      console.log(data);
       return;
     }
     handleLogin(loginToken.accessToken);
     console.log(data);
   };
+
   // const onSubmit: SubmitHandler<ValidationSchema> = (data) => console.log(data);
 
   return (
@@ -55,7 +55,8 @@ export default function LoginForm() {
           <hr className="line" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="form-container">
-          <CustomInput
+          <input
+            className='custom-input'
             type="string"
             placeholder="Email"
             {...register('email')}
@@ -63,7 +64,8 @@ export default function LoginForm() {
           {errors.email && (
             <CustomErrors> {errors?.email.message} </CustomErrors>
           )}
-          <CustomInput
+          <input
+            className="custom-input"
             type="string"
             placeholder="Password"
             {...register('password')}

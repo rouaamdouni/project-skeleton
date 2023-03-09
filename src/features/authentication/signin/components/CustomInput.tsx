@@ -11,4 +11,3 @@ export default function CustomInput({ placeholder, type }: CustomInputProps) {
     <input type={type} placeholder={placeholder} className="custom-input" />
   );
 }
-// w-full border-fancyBlue text-[13px] pl-[5px] border-w-1	h-[38px] border-[1px] rounded-[3px]

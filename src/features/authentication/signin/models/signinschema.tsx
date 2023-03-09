@@ -27,12 +27,12 @@ const SignInSchema = z.object({
   //     (value) => /.*[`~<>?,./!@#$%^&*()\\-_+="'|{}\\[\\];:\\\\]*/.test(value),
   //     'One special character'
   //   ),
-  email: z.string().min(1, { message: "Email is required" }).email({
-    message: "Must be a valid email",
+  email: z.string().min(1, { message: 'Email is required' }).email({
+    message: 'Must be a valid email',
   }),
   password: z
     .string()
-    .min(6, { message: "Password must be atleast 8 characters" }),
+    .min(6, { message: 'Password must be atleast 8 characters' }),
 });
 
 export { SignInSchema };

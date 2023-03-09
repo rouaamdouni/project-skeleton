@@ -1,5 +1,5 @@
 import { AxiosError } from 'axios';
-import User from '../models/User';
+import User from '../../signin/models/Iuser';
 import instance from '../utils/axios';
 
 type RegisterArgs = {

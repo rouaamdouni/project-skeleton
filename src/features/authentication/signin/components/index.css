@@ -40,10 +40,10 @@
   @apply text-[#05445E] mt-[20px] text-center  w-full
 }
 .btn-link2 {
-  @apply text-[#FFCC29] w-full
+  @apply text-[#FFCC29] w-full font-semibold
 }
 /* ContentComponent styling*/
-.content-text {
+/* .content-text {
   @apply w-[300] text-[1.1em] font-fontlight font-semibold text-darkBlue pt-2;
 }
 .content-header {
@@ -52,4 +52,21 @@
 
 .content-wrapper{
   @apply flex flex-col absolute right-[50%] top-[30%] items-center w-[40%]
+} */
+.content-text {
+  @apply w-[300] font-fontlight text-darkBlue font-fontlight font-semibold text-darkBlue pt-2;
+};
+
+.content-header {
+  @apply text-[35px] font-fontBold  text-yellow mt-[80px] mb-5;
 }
+
+.content-wrapper{
+  @apply flex flex-col absolute    right-[50%] top-[30%] items-center w-[40%]
+}
+.btn1{
+  @apply w-[250px] border-fancyBlue text-[13px] pl-[12px] h-[38px] border-[1px] rounded-[3px] m-[5px]
+  
+  
+ relative border text-[0.75em] text-center text-darkBlue p-[0.5em] rounded-[5px] border-solid border-fancyBlue;
+  }
